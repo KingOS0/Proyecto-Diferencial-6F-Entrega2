@@ -1,0 +1,20 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.coverage
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Resultados generados fuera de los resultados finales documentados
+resultados_entrega2/

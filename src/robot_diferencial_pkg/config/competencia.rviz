@@ -1,0 +1,63 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1.0
+      Plane Cell Count: 40
+      Reference Frame: mundo
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Style: Flat Squares
+      Size (m): 0.03
+      Color Transformer: FlatColor
+      Color: 255; 255; 255
+      Topic:
+        Value: /scan
+        Reliability Policy: Best Effort
+    - Class: rviz_default_plugins/Path
+      Name: Trayectoria real (Gazebo)
+      Enabled: true
+      Color: 25; 255; 0
+      Line Width: 0.03
+      Topic:
+        Value: /trayectoria_real
+    - Class: rviz_default_plugins/Path
+      Name: Trayectoria estimada (odometria)
+      Enabled: true
+      Color: 255; 85; 0
+      Line Width: 0.03
+      Topic:
+        Value: /trayectoria_calc
+    - Class: rviz_default_plugins/Image
+      Name: Camara
+      Enabled: true
+      Topic:
+        Value: /image_raw
+        Reliability Policy: Best Effort
+  Global Options:
+    Fixed Frame: mundo
+    Background Color: 48; 48; 48
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Scale: 60
+      X: 3.0
+      Y: 3.0
+  Enabled: true
